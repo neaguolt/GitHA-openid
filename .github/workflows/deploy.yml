@@ -76,7 +76,7 @@ jobs:
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         with:
-          bucket: githa-openid-demo
+          bucket: githa-openid
           dist-folder: ./dist
           bucket-region: us-east-2
       - name: Output information
