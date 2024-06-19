@@ -1,6 +1,6 @@
 import os
 import boto3
-import mimestypes
+import mimetypes
 from botocore.config import Config
 
 
