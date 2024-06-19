@@ -57,24 +57,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Get build artifacts
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: dist-files
           path: ./dist
       - name: Output contents
         run: ls
       - name: Get AWS permissions
-        uses: aws-actions/configure-aws-credentials@v1
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::450226343468:role/GitHubDemo1
-          aws-region: us-east-1
+          role-to-assume: arn:aws:iam::032845261288:role/Github_demo
+          aws-region: us-east-2
       - name: Deploy site
         id: deploy
         uses: ./.github/actions/deploy-s3-docker
         with:
-          bucket: gha-security-hosting-demo
+          bucket: githa-openid-demo
           dist-folder: ./dist
           # bucket-region: us-east-2
       - name: Output information
