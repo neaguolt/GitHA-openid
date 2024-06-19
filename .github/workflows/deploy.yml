@@ -64,7 +64,9 @@ jobs:
           name: dist-files
           path: ./dist
       - name: Output contents
-        run: ls
+        run: |
+          cd dist
+          ls
       - name: Get AWS permissions
         uses: aws-actions/configure-aws-credentials@v4
         with:
