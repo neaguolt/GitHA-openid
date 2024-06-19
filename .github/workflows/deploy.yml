@@ -68,7 +68,7 @@ jobs:
       - name: Get AWS permissions
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::032845261288:role/Github_demo
+          role-to-assume: arn:aws:iam::032845261288:role/GitHubOpenID-demo
           aws-region: us-east-1
       - name: Deploy site
         id: deploy
